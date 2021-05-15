@@ -1,0 +1,12 @@
+@use "theme" as *;
+@use "@material/typography" as *;
+
+.container {
+  position: fixed;
+  left: 0;
+  bottom: 100%;
+  z-index: 5;
+  pointer-events: none;
+
+  @include typography(overline);
+}

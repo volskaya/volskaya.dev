@@ -1,0 +1,37 @@
+@use "theme" as *;
+
+.container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100vw;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-y: scroll;
+
+  @include lg {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0 80px;
+  }
+
+  @include xl {
+    overflow-y: unset;
+    flex-direction: row-reverse;
+    flex-basis: auto;
+    flex-wrap: nowrap;
+    padding: 0 80px 0 0;
+  }
+}
+
+.cell {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

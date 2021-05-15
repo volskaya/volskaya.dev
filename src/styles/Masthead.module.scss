@@ -1,0 +1,135 @@
+@use "theme" as *;
+@use "@material/typography" as *;
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: 8px 64px;
+
+  @include sm {
+    width: 80%;
+  }
+
+  @include lg {
+    // width: 64%;
+    max-width: 703px;
+    // padding: 64px 0;
+    padding: 0 80px 0 0;
+  }
+
+  @include xl {
+    max-width: 703px;
+    padding: 0 80px 0 0;
+  }
+}
+
+.title {
+  @include typography(headline4);
+  text-align: right;
+
+  @include lg {
+    @include typography(headline3);
+  }
+}
+
+.about {
+  @include typography(body1);
+  text-align: justify;
+  margin: 0;
+  box-sizing: border-box;
+  padding-bottom: 16px;
+  text-indent: 32px;
+
+  @include sm {
+    padding-bottom: 8px;
+  }
+
+  @include md {
+    padding-bottom: 16px;
+  }
+
+  @include lg {
+    @include typography(headline6);
+    padding-bottom: 32px;
+    text-indent: 0;
+  }
+
+  @include xl {
+    line-height: unset;
+    padding-bottom: 16px;
+  }
+}
+
+.readMore {
+  @include github-button-container;
+  @include typography(caption);
+  color: $material-gray-700;
+  text-align: right;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin: 8px 0 0 0;
+
+  @include lg {
+    margin: 8px 16px 0 0;
+  }
+}
+
+.buttonStyle {
+  @include github-button-container;
+  @include typography(button);
+  display: block;
+  box-sizing: border-box;
+  padding: 0px 16px;
+  width: 100%;
+  text-align: start;
+  cursor: pointer;
+
+  @include lg {
+    font-size: 16px;
+  }
+}
+
+.purpleWrapButton {
+  @include github-button-container;
+  display: inline;
+  text-indent: 0;
+  line-height: 1;
+}
+
+.line {
+  display: inline-block;
+  height: 2px;
+  margin: 8px 16px;
+  width: 64%;
+  background-color: $material-gray-700;
+
+  @include lg {
+    height: 4px;
+    margin: 32px;
+  }
+}
+
+.contactInfo {
+  text-align: left;
+  width: 100%;
+}
+
+.containOverflow {
+  overflow: hidden;
+  width: 100%;
+}
+
+.widthFix {
+  width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}

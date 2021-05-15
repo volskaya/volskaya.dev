@@ -1,0 +1,16 @@
+@use "theme" as *;
+@use "@material/typography" as *;
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.25s;
+  transition-timing-function: ease-out;
+  opacity: 1;
+}
+
+.text {
+  @include typography(caption);
+  color: $material-gray-700;
+}

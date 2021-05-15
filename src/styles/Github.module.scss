@@ -1,0 +1,80 @@
+@use "theme" as *;
+
+.container {
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  @include xl {
+    width: 50%;
+  }
+}
+
+.containerSizes {
+  height: 100vh;
+  padding: 0 64px 0 0;
+
+  @include lg {
+    height: 50%;
+    padding: 64px 0;
+  }
+
+  @include xl {
+    height: 100vh;
+    width: 50%;
+    padding: 0;
+  }
+}
+
+.innerContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 64px 0;
+
+  @include sm {
+    height: auto;
+    padding: 32px 0;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include lg {
+    height: 100%;
+    padding: 0;
+  }
+
+  @include xl {
+    height: auto;
+    justify-content: center;
+    width: unset;
+    flex-direction: column;
+    flex-wrap: unset;
+    align-items: flex-start;
+  }
+}
+
+.notificationContainer {
+  position: absolute;
+  top: -32px;
+  right: -32%;
+  width: 200px;
+}
+
+.notificationArrow {
+  position: absolute;
+  bottom: -80px;
+  left: 10%;
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,88 @@
+$yeager: "Yeager", sans-serif;
+$mono: monospace;
+
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+@font-face {
+  font-family: "Yeager";
+  src: url("/fonts/yeager/Yeager-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yeager";
+  src: url("/fonts/yeager/Yeager-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yeager";
+  src: url("/fonts/yeager/Yeager-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin yeager-12 {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-weight: $light;
+}
+
+@mixin yeager-14 {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-weight: $regular;
+}
+
+@mixin yeager-16 {
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  font-weight: $light;
+}
+
+@mixin yeager-24 {
+  font-size: 24px;
+  letter-spacing: 0px;
+  font-weight: $regular;
+}
+
+@mixin yeager-34 {
+  font-size: 34px;
+  letter-spacing: 0.25px;
+  font-weight: $bold;
+}
+
+@mixin yeager-50 {
+  font-size: 50px;
+  letter-spacing: 0px;
+  font-weight: $light;
+}
+
+@mixin yeager-70 {
+  font-size: 70px;
+  letter-spacing: 1.8rem;
+  font-weight: $bold;
+}
+
+@mixin yeager-reg {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: $regular;
+}
+
+@mixin yeager-caption {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-weight: $light;
+}
+
+@mixin yeager-mono {
+  font-family: $mono;
+  font-size: 16px;
+  font-weight: $bold;
+  line-height: 1.2em;
+}

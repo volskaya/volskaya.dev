@@ -1,0 +1,26 @@
+@use "theme" as *;
+
+.container {
+  @include github-button-container;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: $foreground-color;
+  will-change: opacity;
+  opacity: 0;
+  transition: 0.1s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.2;
+  }
+}
+
+.passtrough {
+  pointer-events: none;
+}

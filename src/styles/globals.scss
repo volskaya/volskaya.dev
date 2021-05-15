@@ -1,0 +1,100 @@
+@use "theme";
+@use "@material/typography" as *;
+@use "@material/icon-button";
+
+html,
+body {
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  @include theme.property(background-color, background);
+  @include theme.property(color, on-surface);
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: theme.$yeager;
+}
+
+a {
+  color: #7941f2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #7941f2;
+}
+
+label {
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-padding: 0.4em 0;
+  padding: 0.4em;
+  margin: 0 0 0 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+input:disabled {
+  color: #ccc;
+}
+
+button {
+  color: #212121;
+  background-color: #f4f4f4;
+  outline: none;
+}
+
+button:disabled {
+  color: #999;
+}
+
+button:not(:disabled):active {
+  background-color: #ddd;
+}
+
+button:focus {
+  border-color: #666;
+}
+
+p {
+  @include typography(body1);
+  text-align: left;
+}
+
+strong {
+  @include typography(headline5);
+}
+
+a,
+li {
+  @include typography(button);
+  display: block;
+  text-align: left;
+  margin: 0;
+
+  a {
+    @include theme.property(color, primary);
+    cursor: pointer;
+  }
+}
+
+@include icon-button.core-styles;

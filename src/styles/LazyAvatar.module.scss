@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.floatingContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.imageFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: opacity;
+  transition: 0.25s;
+  transition-timing-function: ease-in-out;
+}

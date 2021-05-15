@@ -1,0 +1,77 @@
+@use "theme" as *;
+@use "@material/typography" as *;
+
+.linkButton {
+  @include github-button-container;
+  color: $purple;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  line-height: 0;
+}
+
+.imageFrame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.inlineCode {
+  padding: 0;
+  box-sizing: border-box;
+  white-space: pre;
+  @include property(color, primary);
+}
+
+.codeStyle {
+  @include property(color, on-surface);
+  padding: 12px;
+  box-sizing: border-box;
+
+  code {
+    @include typography(subtitle2);
+    font-family: "monospace";
+    font-weight: bold;
+    white-space: pre;
+    display: flex;
+  }
+}
+
+.codeStyle > code {
+  padding: 0;
+}
+
+.titleStyle {
+  @include typography(headline6);
+  margin-top: 32px;
+}
+
+.captionStyle {
+  @include typography(caption);
+  @include property(color, text-hint-on-dark);
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.emphasisStyle {
+  @include no-scrollbar;
+  @include typography(body1);
+  @include property(background-color, background);
+  padding: 4px;
+  border-radius: 4px;
+  max-width: 100%;
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+
+.emphasisOnCode {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.listItemPrefix {
+  @include property(color, primary);
+}

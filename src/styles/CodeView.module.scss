@@ -1,0 +1,155 @@
+@use "theme" as *;
+@use "@material/typography" as *;
+
+@mixin paragraph-padding {
+  padding: 0;
+
+  @include lg {
+    padding: 0 16px;
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-dark;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @include xl {
+    left: -50vw;
+    width: 50vw;
+  }
+}
+
+.contentScrollablePadding {
+  padding: 24px 64px 24px 24px;
+
+  @include lg {
+    padding: 64px 96px 64px 96px;
+  }
+}
+
+.contentFrame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  h1 {
+    @include typography(headline5);
+  }
+
+  p {
+    @include typography(body1);
+    @include paragraph-padding;
+    margin-bottom: 0;
+  }
+
+  code {
+    // Match font with the regular text.
+    // Code is set to monospace from the markdown renderer style.
+    @include typography(body1);
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    width: 100%;
+    margin: 16px 0 0 0;
+
+    li {
+      margin-bottom: 2px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    li:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  li {
+    @include typography(body1);
+    background-color: rgba(#fff, 0.05);
+    padding: 8px;
+    width: 100%;
+  }
+
+  a {
+    color: $purple;
+    text-decoration: none;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover &:active {
+      color: $purple-light;
+      text-decoration: none;
+    }
+  }
+
+  table {
+    margin: 16px 0 0 0;
+    width: 100%;
+  }
+
+  td {
+    background-color: rgba(#fff, 0.05);
+    padding: 8px;
+
+    &:nth-child(1) {
+      width: 32%;
+    }
+  }
+}
+
+.titleStyle {
+  @include github-button-container;
+  @include typography(headline5);
+  padding: 8px;
+  color: $foreground-color !important;
+}
+
+.techFrame {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 16px 16px 16px;
+
+  @include lg {
+    margin: 0 32px 32px 32px;
+  }
+}
+
+.techText {
+  @include typography(caption);
+  padding: 0 4px 0 4px;
+  color: $material-gray-700;
+}
+
+.markdownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.markdownContainer > :first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.notFoundContainer {
+  @include typography(caption);
+  @include property(color, text-hint-on-dark);
+
+  width: 100%;
+  text-align: center;
+}
+
+.notFoundContainer > a {
+  text-align: center;
+}

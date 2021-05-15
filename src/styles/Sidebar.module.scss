@@ -1,0 +1,29 @@
+@use "theme" as *;
+
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-left: 8px;
+  width: 48px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include lg {
+    margin-left: 16px;
+  }
+}
+
+.holster {
+  width: 32px;
+  height: 32px;
+  margin: 16px 0 16px 0;
+  overflow: hidden;
+
+  @include md {
+    margin: 8px 0 8px 0;
+  }
+}

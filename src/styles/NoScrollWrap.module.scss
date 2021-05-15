@@ -1,0 +1,6 @@
+@use 'theme' as *;
+
+.hiddenScrollBar {
+  overflow: scroll;
+  @include no-scrollbar;
+}

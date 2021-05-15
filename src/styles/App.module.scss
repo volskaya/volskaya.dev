@@ -1,0 +1,96 @@
+@use "theme" as *;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+
+  @include md {
+    overflow-y: scroll;
+  }
+
+  @include lg {
+    overflow-y: unset;
+  }
+}
+
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #090909;
+  will-change: opacity;
+  opacity: 1;
+}
+
+.landingContainOverflow {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.landingContainer {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.codeViewContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.gradientOverlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 4;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.grainOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+
+  canvas {
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.triangleContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.triangle {
+  position: absolute;
+  pointer-events: none;
+}
